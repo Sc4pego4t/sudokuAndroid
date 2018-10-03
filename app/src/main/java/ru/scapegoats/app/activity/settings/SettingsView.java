@@ -15,7 +15,7 @@ import ru.scapegoats.app.modules.Viewable;
 public class SettingsView implements Viewable {
 
     SettingsActivity activity;
-    Switch areas,bloks,sound,mistakes;
+    Switch areas,bloks,sound,mistakes,animation;
     Spinner difficulty;
     SettingsView(SettingsActivity activity, View rootView){
         this.activity=activity;
@@ -25,6 +25,7 @@ public class SettingsView implements Viewable {
         mistakes = rootView.findViewById(R.id.mistakes);
         sound = rootView.findViewById(R.id.sound);
         difficulty = rootView.findViewById(R.id.difficulty);
+        animation=rootView.findViewById(R.id.animation);
 
     }
 

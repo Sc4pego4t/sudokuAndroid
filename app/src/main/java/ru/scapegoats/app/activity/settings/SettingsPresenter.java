@@ -30,11 +30,14 @@ public class SettingsPresenter implements Presenter<SettingsView> {
 
         settings = SettingsPreferences.getSettings(view.activity);
 
+        view.animation.setChecked(getBool(settings.get(SettingsPreferences.ANIMATION)));
         view.areas.setChecked(getBool(settings.get(SettingsPreferences.HIGHLIGHTAREAS)));
         view.bloks.setChecked(getBool(settings.get(SettingsPreferences.HIGHLIGHTBLOCK)));
         view.mistakes.setChecked(getBool(settings.get(SettingsPreferences.HIGHLIGHTMISTAKES)));
         view.sound.setChecked(getBool(settings.get(SettingsPreferences.SOUND)));
+
         view.difficulty.setSelection(settings.get(SettingsPreferences.DIFFICULTY));
+
 
         view.difficulty.setOnItemSelectedListener(new DifficultyChangedListener());
     }
@@ -77,6 +80,7 @@ public class SettingsPresenter implements Presenter<SettingsView> {
         settings.put(SettingsPreferences.HIGHLIGHTBLOCK,getInt(settingsView.bloks.isChecked()));
         settings.put(SettingsPreferences.HIGHLIGHTMISTAKES,getInt(settingsView.mistakes.isChecked()));
         settings.put(SettingsPreferences.SOUND,getInt(settingsView.sound.isChecked()));
+        settings.put(SettingsPreferences.ANIMATION,getInt(settingsView.animation.isChecked()));
 
         SettingsPreferences.setSettings(settings,settingsView.activity);
     }

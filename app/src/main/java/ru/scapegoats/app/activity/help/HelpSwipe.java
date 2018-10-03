@@ -8,6 +8,7 @@ public class HelpSwipe implements Swipable {
     HelpSwipe(HelpActivity activity){
         this.activity=activity;
     }
+
     @Override
     public void onLeftSwipe() {
 
@@ -15,7 +16,7 @@ public class HelpSwipe implements Swipable {
 
     @Override
     public void onRightSwipe() {
-
+        activity.onBackPressed();
     }
 
     @Override

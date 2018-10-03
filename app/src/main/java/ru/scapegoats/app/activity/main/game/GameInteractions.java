@@ -267,7 +267,7 @@ public class GameInteractions {
             }
         }
     }
-    ArrayList<ValueAnimator> animatorsList;
+    private ArrayList<ValueAnimator> animatorsList;
 
     private final int INITIAL_ANIMATION_DURATION=300;
     private final int ANIMATION_INCREMENT=150;
@@ -299,7 +299,7 @@ public class GameInteractions {
             animatorsList=new ArrayList<>();
 
             int duration=INITIAL_ANIMATION_DURATION;
-            //create animations to row
+            //create animations to row and columns
             for (int col = selectedCol; col < SIZE; col++) {
                 duration=createAndStartAnimator(selectedRow,col,duration);
             }
@@ -316,6 +316,7 @@ public class GameInteractions {
                 duration=createAndStartAnimator(row,selectedCol,duration);
             }
         }
+
         //check setting for highlight blocks
         if(gameSettings.get(SettingsPreferences.HIGHLIGHTBLOCK)==SettingsPreferences.CHECKED) {
             CoupleInt rowScopes=areaScopes(selectedRow);
