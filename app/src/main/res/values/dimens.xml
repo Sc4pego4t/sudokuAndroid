@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splitterSize">1dp</dimen>
+    <dimen name="buttonTextSize">8sp</dimen>
+    <dimen name="cellTextSize">7sp</dimen>
+    <dimen name="margin">10dp</dimen>
+    <dimen name="margin05x">5dp</dimen>
+    <dimen name="margin03x">3dp</dimen>
+    <dimen name="margin2x">20dp</dimen>
+    <dimen name="iconSize">30dp</dimen>
+    <dimen name="titleTextSize">18sp</dimen>
+    <dimen name="textSize">12sp</dimen>
+</resources>

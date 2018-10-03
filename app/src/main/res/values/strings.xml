@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">Sudoku</string>
+
+    <!--Meny items-->
+    <string name="back">Back</string>
+    <string name="erase">Erase</string>
+    <string name="settings">Settings</string>
+    <string name="new_game">New game</string>
+    <string name="help">Help</string>
+
+
+    <!--Settings-->
+    <array name="difficulyList">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Professional</item>
+    </array>
+    <string name="difficulty">Difficulty</string>
+    <string name="difficultyDescription">Affects the number of empty cells</string>
+
+    <string name="highlightAreas">Highlight areas</string>
+    <string name="highlightAreasDescription">Highlight row and column of selected cell</string>
+
+    <string name="highlightBlocks">Highlight blocks</string>
+    <string name="highlightBlocksDescription">Highlight block of selected cell</string>
+
+    <string name="sound">Sound effects</string>
+    <string name="soundDescription">Play sound on taps or another events</string>
+
+    <string name="highlightMistakes">Highlight mistakes</string>
+    <string name="highlightMistakesDescription">Detect and highlight duplicates</string>
+
+    <string name="showAnimation">Show animation</string>
+    <string name="showAnimationDescription">Play animation on taps or after some inputs</string>
+
+    <!--Settings Dialog-->
+    <string name="settingsDialogText">Difficulty changed, are you want to start a new game?</string>
+    <string name="settingsDialogTitle">Settings</string>
+    <string name="positive">Yes</string>
+    <string name="negative">No</string>
+
+    <!--Settings Dialog-->
+    <string name="wonDialogText">You won, are you want to start a new game?</string>
+    <string name="gameTitle">Game</string>
+
+    <!--Start new game Dialog-->
+    <string name="newGameDialogText">Are you want to start a new game?</string>
+
+    <!--Help view 1-->
+    <string name="title1">The Rules of Sudoku</string>
+    <string name="text1">
+The rules of the game are simple: each of the nine blocks has to contain all the numbers 1-9 within its squares. Each number can only appear once in a row, column or box.\n\n
+
+    Here you can see initial grid with non repeating elements.</string>
+
+    <!--Help view 2-->
+    <string name="title2">Game instructions</string>
+    <string name="text2_1">To fill a cell you need to click on it</string>
+
+    <string name="text2_2">And then just click on one of number buttons with needed value</string>
+
+    <string name="text2_3">Also you can erase values and revert to previous changing with these two buttons</string>
+
+    <!--Help view 3-->
+    <string name="title3">Another options</string>
+
+    <string name="text3_1">You can change your game appearance and behavior by click on Setting menu and then change items to your best game experience</string>
+
+    <string name="text3_2">Also you can start a new game if you tired or bored by current one.</string>
+
+
+</resources>

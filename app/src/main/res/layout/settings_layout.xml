@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/animTarg"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_margin="@dimen/margin2x"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/difficulty"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin05x"
+                android:layout_height="wrap_content"
+                android:text="@string/difficultyDescription"/>
+        </LinearLayout>
+        <Spinner
+            android:id="@+id/difficulty"
+            android:layout_width="wrap_content"
+            android:entries="@array/difficulyList"
+            android:layout_height="wrap_content">
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/margin2x"
+        android:layout_width="match_parent"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/sound"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin05x"
+                android:layout_height="wrap_content"
+                android:text="@string/soundDescription"/>
+        </LinearLayout>
+        <Switch
+            android:id="@+id/sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Switch>
+    </LinearLayout>
+    <LinearLayout
+    android:layout_margin="@dimen/margin2x"
+    android:layout_width="match_parent"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/highlightMistakes"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin05x"
+                android:layout_height="wrap_content"
+                android:text="@string/highlightMistakesDescription"/>
+        </LinearLayout>
+    <Switch
+        android:id="@+id/mistakes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </Switch>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/margin2x"
+        android:gravity="center"
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/highlightAreas"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin05x"
+                android:layout_height="wrap_content"
+                android:text="@string/highlightAreasDescription"/>
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/areas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Switch>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="@dimen/margin2x"
+        android:layout_width="match_parent"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/highlightBlocks"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin05x"
+                android:layout_height="wrap_content"
+                android:text="@string/highlightBlocksDescription"/>
+        </LinearLayout>
+        <Switch
+            android:id="@+id/blocks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Switch>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="@dimen/margin2x"
+        android:layout_width="match_parent"
+        android:gravity="center"
+
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@android:color/black"
+                android:text="@string/showAnimation"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin05x"
+                android:layout_height="wrap_content"
+                android:text="@string/showAnimationDescription"/>
+        </LinearLayout>
+        <Switch
+            android:id="@+id/animation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Switch>
+
+
+</LinearLayout>
+</LinearLayout>

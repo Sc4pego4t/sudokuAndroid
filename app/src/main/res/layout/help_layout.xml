@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/viewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/margin2x"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <RadioGroup
+            android:layout_gravity="center_vertical|end"
+            android:layout_width="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_height="wrap_content" >
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/rb1"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/rb2"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:id="@+id/rb3"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+</FrameLayout>
