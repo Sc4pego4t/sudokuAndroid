@@ -23,17 +23,17 @@ import ru.scapegoats.app.activity.settings.SettingsActivity;
 import ru.scapegoats.app.modules.AbstractActivity;
 import ru.scapegoats.app.modules.Presenter;
 import ru.scapegoats.app.modules.Swipable;
+import ru.scapegoats.app.modules.dialogs.AppRater;
 
 public class MainActivity extends AbstractActivity<MainView> {
 
 
-
-        @Override
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
         setContentView(R.layout.main_layout);
         super.onCreate(savedInstanceState);
-
+        AppRater.appLaunched(this);
     }
 
     @Override

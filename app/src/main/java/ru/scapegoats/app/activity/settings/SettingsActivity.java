@@ -44,7 +44,7 @@ public class SettingsActivity extends AbstractActivity<SettingsView> {
     @Override
     public void onBackPressed() {
         SettingsPresenter settingsPresenter=(SettingsPresenter)presenter;
-        int previousDifficulty=settingsPresenter.settings.get(SettingsPreferences.DIFFICULTY);
+        int previousDifficulty=settingsPresenter.settings.get(SettingsPreferences.Settings.Difficulty);
 
         settingsPresenter.saveSettingsChanges();
         if(previousDifficulty!=settingsPresenter.changedDifficulty){

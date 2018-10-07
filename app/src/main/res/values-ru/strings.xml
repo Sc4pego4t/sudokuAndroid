@@ -24,9 +24,6 @@
     <string name="highlightBlocks">Подсвечивать блоки</string>
     <string name="highlightBlocksDescription">Будут ли посвечиваться блоки выбранных ячеек</string>
 
-    <string name="sound">Звук</string>
-    <string name="soundDescription">Будут ли проигрываться звуковые эффекты при нажатиях или других взаимодействиях</string>
-
     <string name="highlightMistakes">Подсвечивать ошибки</string>
     <string name="highlightMistakesDescription">Будут ли подсвечиваться ошибки</string>
 

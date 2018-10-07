@@ -24,9 +24,6 @@
     <string name="highlightBlocks">Highlight blocks</string>
     <string name="highlightBlocksDescription">Highlight block of selected cell</string>
 
-    <string name="sound">Sound effects</string>
-    <string name="soundDescription">Play sound on taps or another events</string>
-
     <string name="highlightMistakes">Highlight mistakes</string>
     <string name="highlightMistakesDescription">Detect and highlight duplicates</string>
 

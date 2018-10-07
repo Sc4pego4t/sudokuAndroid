@@ -45,7 +45,7 @@ public class GameInitialization {
             button.setPadding(0,button.getPaddingTop(),0,button.getPaddingBottom());
             button.setTextSize(Math.round(activity.getResources().getDimension(R.dimen.buttonTextSize)));
             button.setTextColor(colorPalette.accent);
-            if(gameInteractions.gameSettings.get(SettingsPreferences.THEME).equals(SettingsPreferences.THEME_DARK)){
+            if(gameInteractions.gameSettings.get(SettingsPreferences.Settings.Theme).equals(SettingsPreferences.Themes.Dark.index)){
                 button.setBackground(activity.getResources().getDrawable(R.drawable.outlined_button_dark));
             } else{
                 button.setBackground(activity.getResources().getDrawable(R.drawable.outlined_button));
@@ -159,7 +159,7 @@ public class GameInitialization {
         int upper=8,lower=0;
         Random random=new Random();
 
-        int difficulty=gameInteractions.gameSettings.get(SettingsPreferences.DIFFICULTY)+1;
+        int difficulty=gameInteractions.gameSettings.get(SettingsPreferences.Settings.Difficulty)+1;
 
 
 

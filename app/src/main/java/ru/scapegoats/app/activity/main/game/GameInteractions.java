@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.Map;
 
 import androidx.annotation.NonNull;
@@ -34,12 +35,15 @@ public class GameInteractions {
         this.activity = activity;
     }
 
-    Map<String,Integer> gameSettings;
+    EnumMap<SettingsPreferences.Settings,Integer> gameSettings;
 
 
-    public void setSettings(Map<String,Integer> settings){
+    public void setSettings(EnumMap<SettingsPreferences.Settings,Integer> settings){
+
         gameSettings=settings;
-        colorPalette=new MyColorPalette(activity,gameSettings.get(SettingsPreferences.THEME));
+
+        colorPalette=new MyColorPalette(activity,SettingsPreferences.Themes
+                .valueOf(gameSettings.get(SettingsPreferences.Settings.Theme)));
         if(initialized) {
             redraw();
         }
@@ -67,7 +71,7 @@ public class GameInteractions {
         }
 
         for (Button button:buttonsArray){
-            if(gameSettings.get(SettingsPreferences.THEME).equals(SettingsPreferences.THEME_DARK)) {
+            if(gameSettings.get(SettingsPreferences.Settings.Theme)==SettingsPreferences.Themes.Dark.index) {
                 button.setBackground(activity.getResources().getDrawable(R.drawable.outlined_button_dark));
             } else {
                 button.setBackground(activity.getResources().getDrawable(R.drawable.outlined_button));
@@ -108,7 +112,7 @@ public class GameInteractions {
 
     private void checkUserMistakes() {
         for (CoupleInt el : insertHistory) {
-            if (gameSettings.get(SettingsPreferences.HIGHLIGHTMISTAKES) == SettingsPreferences.CHECKED
+            if (gameSettings.get(SettingsPreferences.Settings.HighlightMistakes) == SettingsPreferences.States.Checked.index
                     && findMistake(el.getV1(), el.getV2())) {
                 cellsArray[el.getV1()][el.getV2()].setTextColor(colorPalette.error);
             } else {
@@ -267,11 +271,11 @@ public class GameInteractions {
         cancelAnimation();
         paint();
         //check setting for highlight areas
-        if(gameSettings.get(SettingsPreferences.HIGHLIGHTAREAS)==SettingsPreferences.CHECKED) {
+        if(gameSettings.get(SettingsPreferences.Settings.HighlightAreas)==SettingsPreferences.States.Checked.index) {
             animatorsList=new ArrayList<>();
 
             //if animation setting is on
-            if(gameSettings.get(SettingsPreferences.ANIMATION)==SettingsPreferences.CHECKED) {
+            if(gameSettings.get(SettingsPreferences.Settings.Animation)==SettingsPreferences.States.Checked.index) {
                 int duration = INITIAL_ANIMATION_DURATION;
                 //create animations to row and columns
                 for (int col = selectedCol+CELL_OFFSET; col < SIZE; col++) {
@@ -301,14 +305,14 @@ public class GameInteractions {
         }
 
         //check setting for highlight blocks
-        if(gameSettings.get(SettingsPreferences.HIGHLIGHTBLOCK)==SettingsPreferences.CHECKED) {
+        if(gameSettings.get(SettingsPreferences.Settings.HighlightBlocks)==SettingsPreferences.States.Checked.index) {
             //if animation setting is on
 
             CoupleInt rowScopes=areaScopes(selectedRow);
             CoupleInt columnScopes=areaScopes(selectedCol);
             for(int row=rowScopes.getV1();row<=rowScopes.getV2();row++){
                 for(int col=columnScopes.getV1();col<=columnScopes.getV2();col++){
-                    if(gameSettings.get(SettingsPreferences.ANIMATION)==SettingsPreferences.CHECKED) {
+                    if(gameSettings.get(SettingsPreferences.Settings.Animation)==SettingsPreferences.States.Checked.index) {
                         //check distances between selected and iterated cells
                         int duration=INITIAL_ANIMATION_DURATION+ANIMATION_INCREMENT;
                         if(row>selectedRow+CELL_OFFSET || row<selectedRow-CELL_OFFSET
@@ -323,7 +327,7 @@ public class GameInteractions {
                             createAndStartAnimator(row,col,duration);
                         }
                     }else {
-                        cellsArray[row][col].setBackgroundColor(activity.getResources().getColor(R.color.blue));
+                        cellsArray[row][col].setBackgroundColor(colorPalette.highlight);
                     }
                 }
             }

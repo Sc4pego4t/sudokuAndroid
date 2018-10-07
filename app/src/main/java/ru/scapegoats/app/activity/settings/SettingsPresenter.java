@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
+import java.util.EnumMap;
 import java.util.Map;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ import ru.scapegoats.app.modules.Presenter;
 import ru.scapegoats.app.modules.SettingsPreferences;
 
 public class SettingsPresenter implements Presenter<SettingsView> {
-    Map<String,Integer> settings;
+    EnumMap<SettingsPreferences.Settings,Integer> settings;
     private SettingsView settingsView;
     int changedDifficulty;
 
@@ -37,15 +38,14 @@ public class SettingsPresenter implements Presenter<SettingsView> {
 
         settings = SettingsPreferences.getSettings(view.activity);
 
-        view.animation.setChecked(getBool(settings.get(SettingsPreferences.ANIMATION)));
-        view.areas.setChecked(getBool(settings.get(SettingsPreferences.HIGHLIGHTAREAS)));
-        view.blocks.setChecked(getBool(settings.get(SettingsPreferences.HIGHLIGHTBLOCK)));
-        view.mistakes.setChecked(getBool(settings.get(SettingsPreferences.HIGHLIGHTMISTAKES)));
-        view.sound.setChecked(getBool(settings.get(SettingsPreferences.SOUND)));
-        view.difficulty.setSelection(settings.get(SettingsPreferences.DIFFICULTY));
+        view.animation.setChecked(getBool(settings.get(SettingsPreferences.Settings.Animation)));
+        view.areas.setChecked(getBool(settings.get(SettingsPreferences.Settings.HighlightAreas)));
+        view.blocks.setChecked(getBool(settings.get(SettingsPreferences.Settings.HighlightBlocks)));
+        view.mistakes.setChecked(getBool(settings.get(SettingsPreferences.Settings.HighlightMistakes)));
+        view.difficulty.setSelection(settings.get(SettingsPreferences.Settings.Difficulty));
         view.difficulty.setOnItemSelectedListener(new DifficultyChangedListener());
 
-        selectedTheme=settings.get(SettingsPreferences.THEME);
+        selectedTheme=settings.get(SettingsPreferences.Settings.Theme);
         frames.get(selectedTheme).setBackgroundColor(settingsView.activity
                 .getResources().getColor(R.color.colorAccent));
 
@@ -143,14 +143,12 @@ public class SettingsPresenter implements Presenter<SettingsView> {
 
     void saveSettingsChanges(){
         settings.clear();
-        //IT'S VITAL, PUT IT IN ORDER
-        settings.put(SettingsPreferences.DIFFICULTY,settingsView.difficulty.getSelectedItemPosition());
-        settings.put(SettingsPreferences.HIGHLIGHTAREAS,getInt(settingsView.areas.isChecked()));
-        settings.put(SettingsPreferences.HIGHLIGHTBLOCK,getInt(settingsView.blocks.isChecked()));
-        settings.put(SettingsPreferences.HIGHLIGHTMISTAKES,getInt(settingsView.mistakes.isChecked()));
-        settings.put(SettingsPreferences.SOUND,getInt(settingsView.sound.isChecked()));
-        settings.put(SettingsPreferences.ANIMATION,getInt(settingsView.animation.isChecked()));
-        settings.put(SettingsPreferences.THEME,selectedTheme);
+        settings.put(SettingsPreferences.Settings.Difficulty,settingsView.difficulty.getSelectedItemPosition());
+        settings.put(SettingsPreferences.Settings.HighlightAreas,getInt(settingsView.areas.isChecked()));
+        settings.put(SettingsPreferences.Settings.HighlightBlocks,getInt(settingsView.blocks.isChecked()));
+        settings.put(SettingsPreferences.Settings.HighlightMistakes,getInt(settingsView.mistakes.isChecked()));
+        settings.put(SettingsPreferences.Settings.Animation,getInt(settingsView.animation.isChecked()));
+        settings.put(SettingsPreferences.Settings.Theme,selectedTheme);
         SettingsPreferences.setSettings(settings,settingsView.activity);
     }
     @Override

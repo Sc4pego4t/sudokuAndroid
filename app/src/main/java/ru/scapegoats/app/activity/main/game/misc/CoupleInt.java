@@ -3,13 +3,18 @@ package ru.scapegoats.app.activity.main.game.misc;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class CoupleInt {
+public class CoupleInt implements Cloneable {
     private int v1;
     private int v2;
 
     public CoupleInt(int v1, int v2) {
         this.v1 = v1;
         this.v2 = v2;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     public int getV1() {
@@ -36,6 +41,8 @@ public class CoupleInt {
         CoupleInt o=(CoupleInt)obj;
         return (v1==o.v1 && v2==o.v2);
     }
+
+
 
     @NonNull
     @Override
