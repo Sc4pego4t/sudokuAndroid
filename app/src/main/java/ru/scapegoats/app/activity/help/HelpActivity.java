@@ -2,6 +2,9 @@ package ru.scapegoats.app.activity.help;
 
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.view.MenuItem;
+
+import com.facebook.drawee.backends.pipeline.Fresco;
 
 import androidx.annotation.Nullable;
 
@@ -17,6 +20,8 @@ public class HelpActivity extends AbstractActivity<HelpView> {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setContentView(R.layout.help_layout);
         super.onCreate(savedInstanceState);
+        Fresco.initialize(this);
+
     }
 
     @Override
@@ -35,5 +40,9 @@ public class HelpActivity extends AbstractActivity<HelpView> {
         return new HelpSwipe(this);
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        onBackPressed();
+        return super.onOptionsItemSelected(item);
+    }
 }

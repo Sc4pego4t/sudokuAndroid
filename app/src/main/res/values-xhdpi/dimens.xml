@@ -11,7 +11,5 @@
     <dimen name="iconSize">30dp</dimen>
     <dimen name="titleTextSize">18sp</dimen>
     <dimen name="textSize">12sp</dimen>
-    <dimen name="gridImage">250dp</dimen>
-
-    <dimen name="ovalSize">35dp</dimen>
+    <dimen name="gridImage">280dp</dimen>
 </resources>

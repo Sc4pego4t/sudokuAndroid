@@ -10,10 +10,12 @@ public class MainView implements Viewable {
 
     LinearLayout container,buttonContainer1;
     MainActivity activity;
-    public MainView(MainActivity activity,View rootView){
+    public LinearLayout general;
+    MainView(MainActivity activity,View rootView){
         this.activity=activity;
         container=rootView.findViewById(R.id.container);
         buttonContainer1=rootView.findViewById(R.id.buttonContainer1);
+        general=rootView.findViewById(R.id.general);
     }
 
     void clearView(){

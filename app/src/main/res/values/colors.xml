@@ -3,12 +3,41 @@
     <color name="colorPrimary">#b6c5d1</color>
     <color name="colorPrimaryDark">#8ea2b3</color>
     <color name="colorAccent">#0062b6</color>
+
+    <color name="errorColor">#ff0000</color>
+
+
+    <!--blue palette-->
     <color name="background">#FAFAFA</color>
     <color name="gray">#b0b0b0</color>
     <color name="darkGray">#848484</color>
     <color name="lightBlue">#e4e8ea</color>
-    <color name="highlightColor">#b6c5d1</color>
-    <color name="selectedColor">#8ea2b3</color>
-    <color name="errorColor">#ff0000</color>
+    <color name="blue">#b6c5d1</color>
+    <color name="darkBlue">#8ea2b3</color>
+
+
+
+    <!--dark palette-->
+    <color name="dark">#a3a2a2</color>
+    <color name="white">#e3ffffff</color>
+    <color name="darkWhite">#e6e6e6</color>
+    <color name="black">#747474</color>
+    <color name="gray2">#4b4b4b</color>
+    <color name="gray3">#1e1e1e</color>
+    <color name="yellow">#ffdd00</color>
+
+    <!--pink palette-->
+    <color name="pink">#ede1e1</color>
+    <!--<color name="gray">#b0b0b0</color>-->
+    <!--<color name="darkGray">#848484</color>-->
+    <color name="pink2">#ead1d1</color>
+    <color name="pink3">#d1acac</color>
+
+    <!--orange palette-->
+    <color name="orange">#fae3bc</color>
+    <color name="orange2">#f7d090</color>
+    <color name="orange3">#deb367</color>
+
+
 
 </resources>

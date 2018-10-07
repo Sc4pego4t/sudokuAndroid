@@ -33,6 +33,9 @@
     <string name="showAnimation">Show animation</string>
     <string name="showAnimationDescription">Play animation on taps or after some inputs</string>
 
+    <string name="selectTheme">Select theme</string>
+    <string name="selectThemeDescription">Changes appearance of game grid</string>
+
     <!--Settings Dialog-->
     <string name="settingsDialogText">Difficulty changed, are you want to start a new game?</string>
     <string name="settingsDialogTitle">Settings</string>

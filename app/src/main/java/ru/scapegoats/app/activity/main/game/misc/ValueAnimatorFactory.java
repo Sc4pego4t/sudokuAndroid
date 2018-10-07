@@ -1,4 +1,4 @@
-package ru.scapegoats.app.activity.main.game;
+package ru.scapegoats.app.activity.main.game.misc;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;

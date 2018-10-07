@@ -13,7 +13,7 @@ import ru.scapegoats.app.R;
 
 public abstract class AbstractActivity<V> extends AppCompatActivity {
 
-    protected V view;
+    public V view;
     public Presenter presenter;
     protected Swipable swipable;
 

@@ -6,7 +6,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
-        android:textSize="@dimen/titleTextSize"
         android:textStyle="bold"
         android:text="@string/title1"
         android:layout_margin="@dimen/margin"
@@ -16,12 +15,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/titleTextSize"
         android:text="@string/text1"
         />
     <ImageView
         android:layout_gravity="center"
-        android:layout_width="280dp"
-        android:layout_height="280dp"
+        android:layout_width="@dimen/gridImage"
+        android:layout_height="@dimen/gridImage"
         android:src="@drawable/initgrid"/>
 </LinearLayout>

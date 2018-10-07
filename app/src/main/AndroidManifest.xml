@@ -8,9 +8,12 @@
         android:roundIcon="@drawable/ic_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".activity.settings.SettingsActivity"/>
-        <activity android:name=".activity.help.HelpActivity"/>
-        <activity android:name=".activity.main.MainActivity">
+        <activity android:name=".activity.settings.SettingsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.help.HelpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.main.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
                 <action android:name="android.intent.action.VIEW"/>

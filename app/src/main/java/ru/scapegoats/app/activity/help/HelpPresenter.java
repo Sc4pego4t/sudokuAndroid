@@ -1,10 +1,12 @@
 package ru.scapegoats.app.activity.help;
 
+
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 
 
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.FragmentTransaction;
 import ru.scapegoats.app.R;
 import ru.scapegoats.app.activity.help.fragments.HelpFragment1;
@@ -22,6 +24,10 @@ public class HelpPresenter implements Presenter<HelpView> {
         view.radioGroup.setOnCheckedChangeListener(new checkedChanged());
         view.rb1.setChecked(true);
         this.view=view;
+        ActionBar bar=view.activity.getSupportActionBar();
+        bar.setHomeButtonEnabled(true);
+        bar.setDisplayHomeAsUpEnabled(true);
+        bar.setTitle(R.string.help);
     }
 
     FragmentTransaction fTrans;

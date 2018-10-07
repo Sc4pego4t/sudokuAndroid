@@ -9,9 +9,16 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import ru.scapegoats.app.R;
+import ru.scapegoats.app.activity.main.game.misc.CoupleInt;
 import ru.scapegoats.app.activity.settings.SettingsActivity;
 import ru.scapegoats.app.modules.AbstractActivity;
 import ru.scapegoats.app.modules.Presenter;
@@ -20,14 +27,12 @@ import ru.scapegoats.app.modules.Swipable;
 public class MainActivity extends AbstractActivity<MainView> {
 
 
-    Bundle savedInstanceState;
-    @Override
+
+        @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
 
-        this.savedInstanceState=savedInstanceState;
         setContentView(R.layout.main_layout);
         super.onCreate(savedInstanceState);
-        Log.e("Create",".");
 
     }
 
@@ -77,6 +82,5 @@ public class MainActivity extends AbstractActivity<MainView> {
     protected Swipable initSwipe() {
         return new MainSwipe(this);
     }
-
 
 }

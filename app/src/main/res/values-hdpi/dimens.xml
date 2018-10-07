@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splitterSize">0.5dp</dimen>
+    <dimen name="ovalStroke">1dp</dimen>
+    <dimen name="buttonTextSize">9sp</dimen>
+    <dimen name="cellTextSize">7sp</dimen>
+    <dimen name="margin">7dp</dimen>
+    <dimen name="margin05x">5dp</dimen>
+    <dimen name="margin03x">3dp</dimen>
+    <dimen name="margin2x">20dp</dimen>
+    <dimen name="iconSize">30dp</dimen>
+    <dimen name="titleTextSize">13sp</dimen>
+    <dimen name="textSize">10sp</dimen>
+    <dimen name="gridImage">240dp</dimen>
+</resources>

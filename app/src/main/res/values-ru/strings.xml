@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Судоку</string>
+
+    <!--Meny items-->
+    <string name="back">Назад</string>
+    <string name="erase">Стереть</string>
+    <string name="settings">Настройки</string>
+    <string name="new_game">Новая игра</string>
+    <string name="help">Руководство</string>
+
+
+    <!--Settings-->
+    <array name="difficulyList">
+        <item>Новичок</item>
+        <item>Опытный</item>
+        <item>Профессионал</item>
+    </array>
+    <string name="difficulty">Сложность</string>
+    <string name="difficultyDescription">Вляет на колличество пустых ячеек</string>
+
+    <string name="highlightAreas">Подсвечивать строки и столбцы</string>
+    <string name="highlightAreasDescription">Будут ли подсвечиваться строки и столбцы выбранных ячеек</string>
+
+    <string name="highlightBlocks">Подсвечивать блоки</string>
+    <string name="highlightBlocksDescription">Будут ли посвечиваться блоки выбранных ячеек</string>
+
+    <string name="sound">Звук</string>
+    <string name="soundDescription">Будут ли проигрываться звуковые эффекты при нажатиях или других взаимодействиях</string>
+
+    <string name="highlightMistakes">Подсвечивать ошибки</string>
+    <string name="highlightMistakesDescription">Будут ли подсвечиваться ошибки</string>
+
+    <string name="showAnimation">Анимация</string>
+    <string name="showAnimationDescription">Будет ли проигрываться анимация при выборе клетки</string>
+
+    <string name="selectTheme">Выбор темы</string>
+    <string name="selectThemeDescription">Меняет облик игрового поля</string>
+
+    <!--Settings Dialog-->
+    <string name="settingsDialogText">Сложность изменена, начать новую игру?</string>
+    <string name="settingsDialogTitle">Настройки</string>
+    <string name="positive">Да</string>
+    <string name="negative">Нет</string>
+
+    <!--Settings Dialog-->
+    <string name="wonDialogText">Вы победили, начать новую игру?</string>
+    <string name="gameTitle">Игра</string>
+
+    <!--Start new game Dialog-->
+    <string name="newGameDialogText">Начать новую игру?</string>
+
+    <!--Help view 1-->
+    <string name="title1">Правила судоку</string>
+    <string name="text1">
+Правила игры просты: каждый из 9 блоков должен содержать все числа от 1 до 9 внутри своих ячеек. Числа не должны повторятся в строке, столбце или блоке.\n\n
+
+    Пример заполененного игрового поля.</string>
+
+    <!--Help view 2-->
+    <string name="title2">Инструкции по игре</string>
+    <string name="text2_1">Чтобы заполнить ячейку, вам необходимо нажать на нее</string>
+
+    <string name="text2_2">И после этого нажать на одну из кнопок с необходимым значением</string>
+
+    <string name="text2_3">Также вы можете стирать значения или возвращаться на ход назад с помощьью этих кнопок</string>
+
+    <!--Help view 3-->
+    <string name="title3">Другие возможности</string>
+
+    <string name="text3_1">Вы можете изменить облик и поведение вашей игры, нажав на кнопку Настройки в меню, и после этого выбрать необходимые опции</string>
+
+    <string name="text3_2">Также вы можете начать новую игру, если вы устали от текущей, нажав на кнопку Новая игра.</string>
+
+
+</resources>

@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/colorAccent"
-        android:textSize="@dimen/titleTextSize"
         android:textStyle="bold"
         android:text="@string/title2"
         android:layout_margin="@dimen/margin"
         />
     <TextView
+        android:id="@+id/gifselcell"
         android:layout_margin="@dimen/margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/titleTextSize"
         android:text="@string/text2_1"
         />
-    <ImageView
-        android:layout_gravity="center"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:src="@drawable/select"/>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/my_image_view"
+        android:layout_width="110dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="110dp"
+        />
     <TextView
         android:layout_margin="@dimen/margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/titleTextSize"
         android:text="@string/text2_2"
         />
     <ImageView
         android:layout_gravity="center"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/gridImage"
         android:layout_height="60dp"
         android:src="@drawable/buttons"/>
     <TextView
@@ -42,7 +43,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/black"
-        android:textSize="@dimen/titleTextSize"
         android:text="@string/text2_3"
         />
     <ImageView
