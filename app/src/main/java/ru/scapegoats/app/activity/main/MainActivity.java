@@ -35,6 +35,8 @@ public class MainActivity extends AbstractActivity<MainView> {
         super.onCreate(savedInstanceState);
         AppRater.appLaunched(this);
         int l;
+        int k;
+        long llasd;
     }
 
     @Override
