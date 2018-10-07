@@ -34,6 +34,7 @@ public class MainActivity extends AbstractActivity<MainView> {
         setContentView(R.layout.main_layout);
         super.onCreate(savedInstanceState);
         AppRater.appLaunched(this);
+        int l;
     }
 
     @Override
