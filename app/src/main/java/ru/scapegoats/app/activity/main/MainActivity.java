@@ -18,14 +18,15 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import ru.scapegoats.app.R;
-import ru.scapegoats.app.activity.main.game.misc.CoupleInt;
+
 import ru.scapegoats.app.activity.settings.SettingsActivity;
 import ru.scapegoats.app.modules.AbstractActivity;
 import ru.scapegoats.app.modules.Presenter;
 import ru.scapegoats.app.modules.Swipable;
-import ru.scapegoats.app.modules.dialogs.AppRater;
+
 
 public class MainActivity extends AbstractActivity<MainView> {
+
 
 
     @Override

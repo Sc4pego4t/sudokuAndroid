@@ -11,13 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class AppRater {
-    private final static String APP_TITLE = "App Name";// App Name
-    private final static String APP_PNAME = "com.example.name";// Package Name
+    private final static String APP_TITLE = "YOUR-APP-NAME";
+    private final static String APP_PNAME = "YOUR-PACKAGE-NAME";
 
-    private final static int DAYS_UNTIL_PROMPT = 3;//Min number of days
-    private final static int LAUNCHES_UNTIL_PROMPT = 3;//Min number of launches
+    private final static int DAYS_UNTIL_PROMPT = 3;
+    private final static int LAUNCHES_UNTIL_PROMPT = 7;
 
-    public static void appLaunched(Context mContext) {
+    public static void app_launched(Context mContext) {
         SharedPreferences prefs = mContext.getSharedPreferences("apprater", 0);
         if (prefs.getBoolean("dontshowagain", false)) { return ; }
 
@@ -34,15 +34,15 @@ public class AppRater {
             editor.putLong("date_firstlaunch", date_firstLaunch);
         }
 
-        // Wait at least n days before opening
+        // Wait at least n days before opening dialog
         if (launch_count >= LAUNCHES_UNTIL_PROMPT) {
-            //if (System.currentTimeMillis() >= date_firstLaunch +
-                    //(DAYS_UNTIL_PROMPT * 24 * 60 * 60 * 1000)) {
+            if (System.currentTimeMillis() >= date_firstLaunch +
+                    (DAYS_UNTIL_PROMPT * 24 * 60 * 60 * 1000)) {
                 showRateDialog(mContext, editor);
-            //}
+            }
         }
 
-        editor.apply();
+        editor.commit();
     }
 
     public static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
